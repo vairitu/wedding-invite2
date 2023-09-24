@@ -4,6 +4,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,7 +13,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,.box {
     font-family: 'Great Vibes', cursive;
 }
 
@@ -104,7 +105,6 @@ h6 {
   
 }
 
- 
 
 .ritu {
     margin-left: -20px;
@@ -165,7 +165,86 @@ h6 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.parents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    font-size:  2.000em;
+}
 .event {
     text-align: center;
     font-size:30px ;
+}
+.line{
+    background-color: rgb(234, 15, 15);
+}
+.vs-photos {
+    display: flex;
+    gap: 20px;
+
+}
+
+.vs-photos img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.vs-photos .vs-bride {
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    background-color: #f0394d;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+}
+
+.couple-parents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 75px;
+}
+
+.overlay-image {
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay-image .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(246, 142, 153, 0.8);
+    transition: all ease-out 0.5s;
+}
+
+.overlay-image .overlay .name {
+    color: #fff;
+    visibility: hidden;
+}
+
+.overlay-image:hover .overlay {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.overlay-image:hover .overlay .name {
+    visibility: visible;
 }
